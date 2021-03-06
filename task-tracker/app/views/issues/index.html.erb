@@ -1,3 +1,46 @@
-<div class="text-6xl">
-  Hello world!
+<header class="flex w-full items-baseline pb-2 border-b-2 mb-4">
+  <div>
+    <a class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors" href="#">New issue</a>
+  </div>
+  <h1 class="flex-grow text-center font-semibold tracking-wide text-2xl">Issues</h1>
+  <div>
+    <a class="bg-indigo-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-indigo-500 transition-colors" href="#">Re-assign</a>
+  </div>
+</header>
+
+<div class="border-2 rounded-lg inline-block overflow-hidden shadow-lg mb-6">
+  <form action="">
+    <input placeholder="Name this issue" class="focus:bg-transparent focus:border-gray-200 focus:ring-0 focus:outline-none px-2 py-2 text-lg font-semibold w-96 border-t-0 border-l-0 border-r-0 border-gray-200 border-b-2" type="text" name="name" autofocus>
+    <div class="p-2 space-x-2">
+      <button class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors" type="submit">Add issue</button>
+      <button class="inline-block text-sm px-3 py-1" type="button">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="space-y-3.5">
+  <div>
+    <h2 class="font-semibold text-gray-700 text-xl mb-1">Apmyp</h2>
+    <ul>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox" name="issue[]" class="rounded-sm" id="">
+        <label for="">
+          Nunc elit tellus, dignissim eget sagittis sit bamet, feugiat vitae massa
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="font-semibold text-gray-700 text-xl mb-1">Popug</h2>
+    <ul>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox" name="issue[]" class="rounded-sm" id="">
+        <label for="">
+          Nunc elit tellus, dignissim eget sagittis sit bamet, feugiat vitae massa
+        </label>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -4,6 +4,8 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
+const importAll = (r) => r.keys().forEach(r);
+importAll(require.context('../', true, /\.png$/));
 
 Rails.start()
 
