@@ -5,3 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://en.wikipedia.org/wiki/MIT_License)
 
 This repository is about PopugJira.
+
+## Event Storming
+
+![PopugJira Event Storming](/popugjira_event_storming.jpg)
