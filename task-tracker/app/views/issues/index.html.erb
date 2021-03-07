@@ -1,0 +1,60 @@
+<div data-controller="new-issue">
+
+  <header class="flex w-full items-baseline pb-2 border-b-2 mb-4">
+    <div>
+      <button
+        class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors"
+        data-action="click->new-issue#open"
+      >New issue</button>
+    </div>
+    <h1 class="flex-grow text-center font-semibold tracking-wide text-2xl">Issues</h1>
+    <div>
+      <a class="bg-indigo-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-indigo-500 transition-colors" href="#">Re-assign</a>
+    </div>
+  </header>
+
+  <form
+    class="hidden border-2 rounded-lg inline-block overflow-hidden shadow-lg mb-6"
+    data-new-issue-target="form"
+  >
+    <input
+      placeholder="Name this issue"
+      class="focus:bg-transparent focus:border-gray-200 focus:ring-0 focus:outline-none px-2 py-2 text-gray-800 text-lg font-semibold w-96 border-t-0 border-l-0 border-r-0 border-gray-200 border-b-2"
+      type="text"
+      name="name"
+      autofocus
+      data-new-issue-target="input"
+    >
+    <div class="p-2 space-x-2">
+      <button class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors" type="submit">Add issue</button>
+      <button class="inline-block text-sm px-3 py-1" data-action="click->new-issue#close" type="button">Cancel</button>
+    </div>
+  </form>
+
+
+  <div class="space-y-3.5">
+    <div>
+      <h2 class="font-semibold text-gray-700 text-xl mb-1">Apmyp</h2>
+      <ul>
+        <li class="flex items-center space-x-2 cursor-pointer" data-controller="issue" data-issue-id-value="1" data-issue-target="wrapper">
+          <input type="checkbox" name="issue[]" class="rounded-sm" id="a1" data-issue-target="checkbox" data-action="issue#toggle">
+          <label for="a1">
+            Nunc elit tellus, dignissim eget sagittis sit bamet, feugiat vitae massa
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-semibold text-gray-700 text-xl mb-1">Poupag</h2>
+      <ul>
+        <li class="flex items-center space-x-2 cursor-pointer" data-controller="issue" data-issue-id-value="2" data-issue-target="wrapper">
+          <input type="checkbox" name="issue[]" class="rounded-sm" id="b1" data-issue-target="checkbox" data-action="issue#toggle">
+          <label for="b1">
+            Lorem ipsum dolor amet
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
