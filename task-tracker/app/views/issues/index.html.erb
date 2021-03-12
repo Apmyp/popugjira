@@ -13,23 +13,18 @@
     </div>
   </header>
 
-  <form
-    class="hidden border-2 rounded-lg inline-block overflow-hidden shadow-lg mb-6"
-    data-new-issue-target="form"
-  >
-    <input
-      placeholder="Name this issue"
-      class="focus:bg-transparent focus:border-gray-200 focus:ring-0 focus:outline-none px-2 py-2 text-gray-800 text-lg font-semibold w-96 border-t-0 border-l-0 border-r-0 border-gray-200 border-b-2"
-      type="text"
-      name="name"
-      autofocus
-      data-new-issue-target="input"
-    >
+  <%= form_with(url: issues_path, html: { class: "hidden border-2 rounded-lg inline-block overflow-hidden shadow-lg mb-6", data: { new_issue_target: 'form' } }) do |form| %>
+    <%= form.text_field :name, 
+      placeholder: 'Name this issue',
+      class: 'focus:bg-transparent focus:border-gray-200 focus:ring-0 focus:outline-none px-2 py-2 text-gray-800 text-lg font-semibold w-96 border-t-0 border-l-0 border-r-0 border-gray-200 border-b-2',
+      required: true,
+      data: { new_issue_target: 'input' }
+    %>
     <div class="p-2 space-x-2">
-      <button class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors" type="submit">Add issue</button>
+      <button class="bg-green-400 inline-block rounded-lg text-gray-50 text-sm px-3 py-1 hover:bg-green-500 transition-colors" data-disable-with="Add issue" type="submit">Add issue</button>
       <button class="inline-block text-sm px-3 py-1" data-action="click->new-issue#close" type="button">Cancel</button>
     </div>
-  </form>
+  <% end %>
 
 
   <div class="space-y-3.5">
