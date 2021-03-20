@@ -28,28 +28,7 @@
 
 
   <div class="space-y-3.5">
-    <div>
-      <h2 class="font-semibold text-gray-700 text-xl mb-1">Apmyp</h2>
-      <ul>
-        <li class="flex items-center space-x-2 cursor-pointer" data-controller="issue" data-issue-id-value="1" data-issue-target="wrapper">
-          <input type="checkbox" name="issue[]" class="rounded-sm" id="a1" data-issue-target="checkbox" data-action="issue#toggle">
-          <label for="a1">
-            Nunc elit tellus, dignissim eget sagittis sit bamet, feugiat vitae massa
-          </label>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="font-semibold text-gray-700 text-xl mb-1">Poupag</h2>
-      <ul>
-        <li class="flex items-center space-x-2 cursor-pointer" data-controller="issue" data-issue-id-value="2" data-issue-target="wrapper">
-          <input type="checkbox" name="issue[]" class="rounded-sm" id="b1" data-issue-target="checkbox" data-action="issue#toggle">
-          <label for="b1">
-            Lorem ipsum dolor amet
-          </label>
-        </li>
-      </ul>
-    </div>
+    <%= render @unassigned_account %>
+    <%= render @accounts %>
   </div>
 </div>

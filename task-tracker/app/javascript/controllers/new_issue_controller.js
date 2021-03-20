@@ -5,6 +5,7 @@ export default class extends Controller {
 
   open() {
     this.formTarget.classList.remove('hidden');
+    this.inputTarget.focus();
   }
 
   close() {

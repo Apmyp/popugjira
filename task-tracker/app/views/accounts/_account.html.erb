@@ -1,0 +1,13 @@
+<% if account.issues.any? %>
+  <div>
+    <h2 class="font-semibold text-gray-700 text-xl mb-1"><%= account.name %></h2>
+      <ul>
+        <% account.issues.each do |issue| %>
+          <li class="flex items-center space-x-2 cursor-pointer" data-controller="issue" data-issue-id-value="1" data-issue-target="wrapper">
+            <input type="checkbox" name="issue[]" <%= 'disabled' if issue.unassigned? %> class="rounded-sm <%= 'opacity-20' if issue.unassigned? %>" id="<%= dom_id(issue) %>" data-issue-target="checkbox" data-action="issue#toggle">
+            <label for="<%= dom_id(issue) %>"><%= issue.name %></label>
+          </li>
+        <% end %>
+      </ul>
+</div>
+<% end %>

@@ -1,5 +1,7 @@
 class IssuesController < ApplicationController
   def index
+    @unassigned_account = Account.unassigned(Issue.where(account_id: nil).all)
+    @accounts = Account.includes(:issues).all
   end
 
   def create
