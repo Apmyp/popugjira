@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   root 'issues#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :issues, only: %i[create] do
+    post :reassign, on: :collection
+    post :close, on: :member
+  end
 end

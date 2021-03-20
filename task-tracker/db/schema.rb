@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_161838) do
   end
 
   create_table "issues", force: :cascade do |t|
-    t.bigint "account_id", null: false
+    t.bigint "account_id"
     t.string "name", null: false
     t.integer "status", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false

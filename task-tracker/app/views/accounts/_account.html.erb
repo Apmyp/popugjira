@@ -1,0 +1,26 @@
+<% if account.issues.any? %>
+  <div>
+    <h2 class="font-semibold text-gray-700 text-xl mb-1"><%= account.name %></h2>
+      <ul>
+        <% account.issues.each do |issue| %>
+          <li
+            class="flex items-center space-x-2 cursor-pointer <%= 'line-through opacity-50' if issue.closed? %>"
+            data-controller="issue"
+            data-issue-url-value="<%= close_issue_path(issue) %>"
+            data-issue-target="wrapper">
+            <input
+              type="checkbox"
+              name="issue[]"
+              <%= 'checked' if issue.closed? %>
+              <%= 'disabled' if issue.unassigned? || issue.closed? %>
+              class="rounded-sm <%= 'opacity-20' if issue.unassigned? %>"
+              id="<%= dom_id(issue) %>"
+              data-issue-target="checkbox"
+              data-action="issue#toggle"
+            >
+            <label for="<%= dom_id(issue) %>"><%= issue.name %></label>
+          </li>
+        <% end %>
+      </ul>
+</div>
+<% end %>
