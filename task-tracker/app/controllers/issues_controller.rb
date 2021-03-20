@@ -15,4 +15,10 @@ class IssuesController < ApplicationController
 
     redirect_to root_path
   end
+
+  def close
+    CloseIssue.call(params[:id])
+
+    head :ok
+  end
 end
