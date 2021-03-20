@@ -9,4 +9,10 @@ class IssuesController < ApplicationController
 
     redirect_to root_path
   end
+
+  def reassign
+    ReassignIssues.call
+
+    redirect_to root_path
+  end
 end
