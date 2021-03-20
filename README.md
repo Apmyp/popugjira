@@ -9,3 +9,7 @@ This repository is about PopugJira.
 ## Event Storming
 
 ![PopugJira Event Storming](/popugjira_event_storming.jpg)
+
+## Domain model
+
+![PopugJira Domain Model](/popugjira_domain_model.jpg)
